@@ -17,8 +17,11 @@ repositories {
 
 dependencies {
     implementation("org.http4k:http4k-core:${property("http4kVersion")}")
+    implementation("org.http4k:http4k-client-apache:${property("http4kVersion")}")
     implementation("org.http4k:http4k-format-jackson:${property("http4kVersion")}")
+
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${property("kotlinVersion")}")
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:${property("junitVersion")}")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:${property("junitVersion")}")
 }
