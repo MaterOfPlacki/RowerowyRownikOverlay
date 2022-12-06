@@ -1,0 +1,7 @@
+# RowerowyRownikOverlay
+
+## Package
+```
+./gradlew shadowJar
+```
+
