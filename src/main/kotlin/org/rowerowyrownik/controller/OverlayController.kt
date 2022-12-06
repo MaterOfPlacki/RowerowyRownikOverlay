@@ -4,13 +4,10 @@ import com.michaelwhyte.rowerowyrownik.service.OverlayImageReversedService
 import org.http4k.core.Method
 import org.http4k.core.Response
 import org.http4k.core.Status
-import org.http4k.core.with
 import org.http4k.routing.RoutingHttpHandler
 import org.http4k.routing.bind
 import org.http4k.routing.path
 import org.http4k.routing.routes
-import org.rowerowyrownik.formats.JacksonMessage
-import org.rowerowyrownik.formats.jacksonMessageLens
 import org.rowerowyrownik.service.OverlayImageService
 import org.rowerowyrownik.service.SquareService
 
@@ -24,10 +21,6 @@ class OverlayController {
         return routes(
             "/ping" bind Method.GET to {
                 Response(Status.OK).body("pong")
-            },
-
-            "/formats/json/jackson" bind Method.GET to {
-                Response(Status.OK).with(jacksonMessageLens of JacksonMessage("Barry", "Hello there!"))
             },
 
             "/overlay/{zoom}/{x}/{y}" bind Method.GET to { request ->

@@ -8,7 +8,7 @@ import javax.imageio.ImageIO
 import kotlin.math.pow
 
 class OverlayImageService(
-    val squareService: SquareService
+    private val squareService: SquareService
 ) {
     private val baseZoomLevel = 14
     private val tileColor = Color(255, 45, 206, 127)
